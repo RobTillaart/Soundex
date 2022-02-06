@@ -57,6 +57,7 @@ unittest(test_soundex_chemicals)
   Soundex SDX;
 
   SDX.setLength(10);
+
   // e.g. for long chemical names
   assertEqual("T624634500", SDX.soundex("Trichloroethylene"));
   assertEqual("P532615323", SDX.soundex("pentacarbon decahydrate"));
@@ -64,6 +65,24 @@ unittest(test_soundex_chemicals)
 }
 
 
+unittest(test_getLength)
+{
+  Soundex SDX;
+
+  assertEqual(4, SDX.getLength());
+
+  for (int i = 4; i < 12; i++)
+  {
+    SDX.setLength(i);
+    assertEqual(i, SDX.getLength());
+  }
+  
+  SDX.setLength(12);
+  assertEqual(11, SDX.getLength());
+}
+
+
 unittest_main()
+
 
 // --------

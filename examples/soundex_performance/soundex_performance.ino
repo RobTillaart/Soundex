@@ -10,6 +10,9 @@
 Soundex SDX;
 
 uint32_t start, stop, total;
+char    *token;
+uint16_t words;
+
 
 char str[] = "Lorem ipsum dolor sit amet, \
 consectetuer adipiscing elit. Aenean commodo ligula eget dolor. \
@@ -26,8 +29,7 @@ viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus \
 varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies \
 nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.";
 
-char *token;
-uint16_t words = 0;
+
 
 void setup()
 {
@@ -39,7 +41,7 @@ void setup()
   Serial.println(SOUNDEX_LIB_VERSION);
   delay(100);
 
-  //  DUMP PER WORD
+  //  SOUNDEX PER WORD
   token = strtok(str, " ,");
   words = 0;
   total = 0;
