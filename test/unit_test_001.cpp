@@ -77,8 +77,8 @@ unittest(test_getLength)
     assertEqual(i, SDX.getLength());
   }
   
-  SDX.setLength(i);
-  assertEqual(i, SDX.getLength());
+  SDX.setLength(12);
+  assertEqual(11, SDX.getLength());
 }
 
 
