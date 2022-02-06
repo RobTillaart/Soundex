@@ -43,12 +43,12 @@ unittest(test_soundex_3)
 {
   Soundex SDX;
   // examples from Wikipedia
-  AssertEqual("R163", SDX.soundex("Robert"));
-  AssertEqual("R163", SDX.soundex("Rupert"));
-  AssertEqual("R150", SDX.soundex("Rubin"));
-  AssertEqual("T522", SDX.soundex("Tymczak"));
-  AssertEqual("P236", SDX.soundex("Pfister"));
-  AssertEqual("H555", SDX.soundex("Honeyman"));
+  assertEqual("R163", SDX.soundex("Robert"));
+  assertEqual("R163", SDX.soundex("Rupert"));
+  assertEqual("R150", SDX.soundex("Rubin"));
+  assertEqual("T522", SDX.soundex("Tymczak"));
+  assertEqual("P236", SDX.soundex("Pfister"));
+  assertEqual("H555", SDX.soundex("Honeyman"));
 }
 
 
@@ -58,9 +58,9 @@ unittest(test_soundex_chemicals)
 
   SDX.setLength(10);
   // e.g. for long chemical names
-  AssertEqual("T624634500", SDX.soundex("Trichloroethylene"));
-  AssertEqual("P532615323", SDX.soundex("pentacarbon decahydrate"));
-  AssertEqual("D261524223", SDX.soundex("deoxyribonucleic acid"));
+  assertEqual("T624634500", SDX.soundex("Trichloroethylene"));
+  assertEqual("P532615323", SDX.soundex("pentacarbon decahydrate"));
+  assertEqual("D261524223", SDX.soundex("deoxyribonucleic acid"));
 }
 
 
