@@ -61,9 +61,9 @@ char * Soundex::soundex(const char * str)
     }
     p++;
   }
-
   return _buffer;
 }
+
 
 // -- END OF FILE -- 
 

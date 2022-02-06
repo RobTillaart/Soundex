@@ -9,7 +9,7 @@
 //
 //  HISTORY
 //  0.1.0   2011-05-20   stand alone application 
-//  0.1.1   2022-02-05   library
+//  0.1.1   2022-02-05   initial library version
 
 
 #include "Arduino.h"
