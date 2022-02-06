@@ -71,7 +71,7 @@ unittest(test_getLength)
 
   assertEqual(4, SDX.getLength());
 
-  for (int i = 4; i < 15; i++)
+  for (int i = 4; i < 12; i++)
   {
     SDX.setLength(i);
     assertEqual(i, SDX.getLength());
