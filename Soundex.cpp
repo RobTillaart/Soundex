@@ -17,7 +17,7 @@ Soundex::Soundex()
 }
 
 
-void Soundex::setLength(uint32_t length = 4)
+void Soundex::setLength(uint32_t length)
 {
   _length = length;
   if (_length > (SOUNDEX_MAX_LENGTH - 1))
@@ -36,7 +36,7 @@ char * Soundex::soundex(const char * str)
   _buffer[_length] = '\0';
   
   //  find begin of word, skip spaces, digits
-  char *p = &str[0];
+  char *p = (char *) &str[0];
   while((*p != 0) && (isalpha(*p) == false)) p++;
   if (*p == 0) return _buffer;
 
