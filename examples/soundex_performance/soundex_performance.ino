@@ -11,7 +11,7 @@ Soundex SDX;
 
 uint32_t start, stop, total;
 char    *token;
-volatile uint16_t words;
+uint16_t words;
 
 
 char str[] = "Lorem ipsum dolor sit amet, \
